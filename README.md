@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Christ Chadrak Mvoungou — Software Engineer & Applied AI
 
-# Run and deploy your AI Studio app
+![Portfolio Preview](./public/favicon.svg)
 
-This contains everything you need to run your app locally.
+> **"Engineering the future of systems."**
 
-View your app in AI Studio: https://ai.studio/apps/8dc03ce7-4f8e-4380-92bf-e6d208190095
+This is the source code for my personal portfolio, showcasing my work at the intersection of backend engineering and applied artificial intelligence. Built with a focus on performance, modern aesthetics, and seamless user experiences.
 
-## Run Locally
+## 🚀 Tech Stack
 
-**Prerequisites:**  Node.js
+- **Framework:** [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Deployment:** Ready for [Vercel](https://vercel.com/) / Netlify
 
+## 🌟 Featured Projects Included
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. **Aura AI** - Voice-powered digital assistant with Vertex AI RAG.
+2. **ViShop** - The Shazam of Video Shopping (Gemini 3 Hackathon).
+3. **CareFlow** - Dual-agent medical AI for post-hospitalization monitoring.
+4. **MockInterview.ai** - Multimodal AI interview simulator using WebSockets.
+
+## 🛠️ Local Development
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/ChristChad-mv/creative-ai-portfolio.git
+cd creative-ai-portfolio
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE). 
+You are free to use this as inspiration, but please do not copy my personal information, project details, or resume.
+
+---
+*Designed & Built by Christ Chadrak Mvoungou*
