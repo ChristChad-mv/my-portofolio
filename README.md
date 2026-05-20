@@ -17,7 +17,7 @@ This is the source code for my personal portfolio, showcasing my work at the int
 ## 🌟 Featured Projects Included
 
 1. **Aura AI** - Voice-powered digital assistant with Vertex AI RAG.
-2. **ViShop** - The Shazam of Video Shopping (Gemini 3 Hackathon).
+2. **ViShop** - The Shazam of Video Shopping.
 3. **CareFlow** - Dual-agent medical AI for post-hospitalization monitoring.
 4. **MockInterview.ai** - Multimodal AI interview simulator using WebSockets.
 
