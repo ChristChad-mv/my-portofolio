@@ -1,0 +1,6 @@
+{
+  "name": "Creative AI Portfolio",
+  "description": "An interactive, visually appealing portfolio for a software engineering student focusing on AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
