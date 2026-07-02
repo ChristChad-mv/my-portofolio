@@ -1,4 +1,4 @@
-# Christ Chadrak Mvoungou — Software Engineer & Applied AI
+# Christ Chadrak Mvoungou — Software Engineer & Applied AI 
 
 <img src="./public/favicon.svg" alt="CM Logo" width="120" />
 
