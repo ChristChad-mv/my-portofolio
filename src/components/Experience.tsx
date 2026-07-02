@@ -1,54 +1,34 @@
 import { motion } from 'motion/react';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
-
-const EXPERIENCES = [
-  {
-    role: "Applied AI Intern",
-    company: "SNCF Voyageurs Matériel",
-    location: "St-Denis, Île-de-France",
-    period: "Apr 2026 — Present",
-    type: "Internship · On-site",
-    description: "Building AI-assisted workflows to harmonize railway maintenance documentation across technical documents written to the S1000D specification. Transforming complex PDFs into structured, queryable data using NLP pipelines, benchmarking semantic similarity strategies, and exploring LLM-assisted approaches for reconciling inconsistencies across document versions.",
-    tags: ["Python", "NLP", "LLM Workflows", "S1000D", "Regex", "Semantic Search"],
-    active: true
-  },
-  {
-    role: "Full-Stack Developer",
-    company: "MAKAV Service Digital",
-    location: "Tours, Centre-Val de Loire",
-    period: "Jun 2025 — Aug 2025",
-    type: "Internship · Hybrid",
-    description: "Built a rental property management application from scratch covering both frontend and backend. Developed a modern interface with React & TypeScript, scalable APIs with FastAPI, managed the database layer with Supabase/PostgreSQL, and containerized the application with Docker.",
-    tags: ["React", "TypeScript", "FastAPI", "Supabase", "PostgreSQL", "Docker"],
-    active: false
-  },
-  {
-    role: "Teaching Assistant",
-    company: "Les Cordées de la Réussite",
-    location: "Tours, Centre-Val de Loire",
-    period: "Oct 2024 — Apr 2025",
-    type: "Contract · On-site",
-    description: "Taught programming and robotics to middle school students using Python and Scratch. Designed interactive lessons and hands-on robotics projects to make foundational computer science concepts accessible and engaging for young learners.",
-    tags: ["Python", "Scratch", "Teaching", "Robotics"],
-    active: false
-  }
-];
+import { useTranslation } from '../context/LanguageContext';
 
 export default function Experience() {
+  const { t } = useTranslation();
+
+  const experiences = t('exp_list') as Array<{
+    role: string;
+    company: string;
+    location: string;
+    period: string;
+    type: string;
+    description: string;
+    tags: string[];
+    active: boolean;
+  }>;
+
   return (
     <section id="experience" className="py-32 px-4 md:px-12 max-w-7xl mx-auto">
       {/* Section Header */}
       <div className="mb-20 flex flex-col md:flex-row justify-between items-end gap-8">
         <div>
-          <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-2">Career Path</h2>
+          <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-2">{t('exp_title')}</h2>
           <div className="text-4xl md:text-6xl font-light text-white leading-tight">
-            Work <br />
-            <span className="italic font-serif text-indigo-300">Experience.</span>
+            {t('exp_subtitle')}
           </div>
         </div>
         <div className="w-full h-[1px] bg-white/10 mb-4 flex-1 hidden md:block mx-8" />
         <span className="text-slate-500 text-xs font-mono font-semibold uppercase tracking-widest">
-          {EXPERIENCES.length} Positions
+          {experiences.length} {t('exp_positions')}
         </span>
       </div>
 
@@ -58,7 +38,7 @@ export default function Experience() {
         <div className="absolute left-[19px] md:left-[23px] top-0 bottom-0 w-px bg-white/5" />
 
         <div className="flex flex-col gap-2">
-          {EXPERIENCES.map((exp, index) => (
+          {experiences.map((exp, index) => (
             <motion.div
               key={exp.company + exp.role}
               initial={{ opacity: 0, x: -15 }}
@@ -92,7 +72,7 @@ export default function Experience() {
                   </div>
                   {exp.active && (
                     <span className="self-start px-2.5 py-0.5 text-[8px] font-mono font-bold uppercase tracking-widest bg-indigo-500/15 text-indigo-400 border border-indigo-500/20 rounded-full shrink-0">
-                      ● Current
+                      ● {t('exp_current')}
                     </span>
                   )}
                 </div>
@@ -131,3 +111,4 @@ export default function Experience() {
     </section>
   );
 }
+

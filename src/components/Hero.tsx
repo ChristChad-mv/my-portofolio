@@ -1,7 +1,10 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center items-center overflow-hidden pt-24 pb-16 bg-[#030303]">
       {/* Tech Grid Background with Mask */}
@@ -34,7 +37,7 @@ export default function Hero() {
         >
           <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
           <span className="text-indigo-300 font-mono text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.25em] font-semibold">
-            Software Engineer · Applied AI
+            {t('hero_badge')}
           </span>
         </motion.div>
 
@@ -56,7 +59,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.35 }}
         >
-          I design systems that think.
+          {t('hero_tagline')}
         </motion.p>
 
         {/* Bio */}
@@ -66,7 +69,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          Engineering student at Polytech Tours building distributed backends, real-time streaming platforms, and autonomous multi-agent AI systems. Currently at SNCF Voyageurs.
+          {t('hero_bio')}
         </motion.p>
         
         {/* CTA Buttons */}
@@ -77,7 +80,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.65 }}
         >
           <a href="#projects" className="w-full sm:w-auto px-7 py-3.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl shadow-lg shadow-indigo-600/20 transition-all duration-300 hover:shadow-indigo-600/30 flex items-center justify-center gap-2 hover:-translate-y-0.5 border border-indigo-500/30">
-            View Projects <ArrowRight size={14} />
+            {t('hero_cta')} <ArrowRight size={14} />
           </a>
           
           <div className="flex items-center gap-3">

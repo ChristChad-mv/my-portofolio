@@ -1,40 +1,34 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { Brain, Code, Cpu, Server } from 'lucide-react';
+import { useTranslation } from '../context/LanguageContext';
 
 const SKILLS = [
   "Python", "TypeScript", "Rust", "FastAPI", "Next.js", "React",
   "LangGraph", "Docker", "GCP", "Terraform", "WebSockets", "RAG", "MongoDB"
 ];
 
-const CATEGORIES = [
+const CATEGORY_CONFIGS = [
   {
-    title: "AI & Intelligent Systems",
     icon: <Brain className="text-indigo-400" size={20} />,
-    description: "Building autonomous workflows, multi-agent frameworks, and multimodal AI integrations.",
     skills: ["LangGraph", "Gemini Live API", "RAG", "Agentic Workflows"]
   },
   {
-    title: "Backend & Architectures",
     icon: <Server className="text-indigo-400" size={20} />,
-    description: "Designing low-latency streaming endpoints, distributed systems, and real-time WebSockets.",
     skills: ["FastAPI", "Next.js", "WebSockets", "Node.js", "Express"]
   },
   {
-    title: "Languages",
     icon: <Code className="text-indigo-400" size={20} />,
-    description: "Writing type-safe, optimized, and performant code for backend systems.",
     skills: ["Python", "TypeScript", "Rust", "Java", "C++"]
   },
   {
-    title: "Cloud & Infrastructure",
     icon: <Cpu className="text-indigo-400" size={20} />,
-    description: "Automating serverless scaling, immutable deployments, and multi-tenant DB schemas.",
     skills: ["GCP", "Docker", "Terraform", "Firebase", "MongoDB"]
   }
 ];
 
 export default function Skills() {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -42,6 +36,16 @@ export default function Skills() {
   });
 
   const x1 = useTransform(scrollYProgress, [0, 1], [0, -600]);
+
+  const translatedCategories = t('skills_categories') as Array<{
+    title: string;
+    description: string;
+  }>;
+
+  const categories = CATEGORY_CONFIGS.map((config, index) => ({
+    ...config,
+    ...translatedCategories[index]
+  }));
 
   return (
     <section id="skills" ref={containerRef} className="py-32 overflow-hidden bg-[#050507] border-y border-white/5 relative">
@@ -51,26 +55,25 @@ export default function Skills() {
       <div className="px-4 md:px-12 max-w-7xl mx-auto mb-20">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <div>
-            <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-2">Expertise & Stack</h2>
+            <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-2">{t('skills_title')}</h2>
             <div className="text-4xl md:text-6xl font-light text-white leading-tight">
-              Core <br />
-              <span className="italic font-serif text-indigo-300">Capabilities.</span>
+              {t('skills_subtitle')}
             </div>
           </div>
           <p className="text-slate-400 max-w-md text-sm font-light leading-relaxed">
-            Engineering student at Polytech Tours. I bridge the gap between high-performance systems engineering, cloud architecture, and modern agentic AI to build bleeding-edge products.
+            {t('skills_intro')}
           </p>
         </div>
 
         {/* Categorized Tech Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-          {CATEGORIES.map((cat, idx) => (
+          {categories.map((cat) => (
             <motion.div
               key={cat.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="glass-card p-6 rounded-2xl flex flex-col justify-between"
             >
               <div>
@@ -109,4 +112,5 @@ export default function Skills() {
     </section>
   );
 }
+
 

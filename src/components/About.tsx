@@ -1,7 +1,10 @@
 import { motion } from 'motion/react';
 import { Download } from 'lucide-react';
+import { useTranslation } from '../context/LanguageContext';
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-24 px-4 md:px-12 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
@@ -12,22 +15,21 @@ export default function About() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-4">About Me</h2>
+          <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-4">{t('about_title')}</h2>
           <h3 className="text-3xl md:text-5xl font-light text-white leading-tight mb-8">
-            Engineering the <br />
-            <span className="italic font-serif text-indigo-300">future of systems.</span>
+            {t('about_subtitle')}
           </h3>
           
           <div className="space-y-6 text-slate-400 font-light leading-relaxed">
-            <p>
-              I am a Software Engineering student at Polytech Tours with a deep passion for building robust, scalable infrastructure that empowers intelligent applications.
-            </p>
-            <p>
-              My expertise lies at the intersection of backend engineering and applied AI. I thrive on solving complex technical challenges — whether it's architecting real-time WebSocket streams with the Gemini Live API, deploying scalable FastAPIs, or orchestrating multi-agent systems with LangGraph.
-            </p>
-            <p>
-              When I'm not writing code or exploring the latest developments in AI research, you'll find me participating in hackathons, refining my architectural design skills, or building tools that bridge the gap between complex AI models and frictionless user experiences.
-            </p>
+            <p>{t('about_p1')}</p>
+            <p>{t('about_p2')}</p>
+            <div className="pl-4 border-l-2 border-indigo-500/20 space-y-2.5 font-mono text-[11px] text-indigo-300/90 py-1 bg-white/[0.01] p-3.5 rounded-xl border border-white/5">
+              <div>// {t('about_axis1')}</div>
+              <div>// {t('about_axis2')}</div>
+              <div>// {t('about_axis3')}</div>
+            </div>
+            <p>{t('about_p3')}</p>
+            <p>{t('about_p4')}</p>
           </div>
           
           <div className="mt-10">
@@ -37,7 +39,7 @@ export default function About() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-indigo-500/30 text-white text-xs font-mono font-semibold tracking-widest uppercase rounded-xl transition-all duration-300"
             >
-              Download Resume <Download size={14} />
+              {t('about_cv')} <Download size={14} />
             </a>
           </div>
         </motion.div>

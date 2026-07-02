@@ -1,59 +1,61 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github, Code2, BrainCircuit, Sparkles, Zap, ShoppingBag, Youtube } from 'lucide-react';
+import { useTranslation } from '../context/LanguageContext';
 
-const PROJECTS = [
+const PROJECT_CONFIGS = [
   {
-    title: "CareFlow",
-    description: "Post-hospitalization patient monitoring with dual-agent medical AI. Automates telephone check-ins following AHRQ RED protocols and instantly triages high-risk readmissions to a nurse dashboard.",
-    tags: ["Python", "Next.js", "LangGraph", "Twilio", "Firestore", "Cloud Scheduler"],
-    type: "AI / Multi-Agent System",
     icon: <BrainCircuit className="text-indigo-400" size={22} />,
     glowColor: "rgba(99, 102, 241, 0.15)",
     repo: "https://github.com/ChristChad-mv/careflow",
-    details: "#"
+    details: "#",
+    tags: ["Python", "Next.js", "LangGraph", "Twilio", "Firestore", "Cloud Scheduler"]
   },
   {
-    title: "MockInterview.ai",
-    description: "Multimodal AI interview simulator with real-time voice, screen-sharing, and interactive coding. Zero-latency WebSocket streams built on top of the Gemini Live API.",
-    tags: ["FastAPI", "React", "Gemini Live API", "GCP", "WebSockets", "WebRTC"],
-    type: "Systems / Multimodal Streaming",
     icon: <Code2 className="text-violet-400" size={22} />,
     glowColor: "rgba(139, 92, 246, 0.15)",
     repo: "https://github.com/ChristChad-mv/mockInterview.ai",
-    details: "#"
+    details: "#",
+    tags: ["FastAPI", "React", "Gemini Live API", "GCP", "WebSockets", "WebRTC"]
   },
   {
-    title: "ViShop",
-    description: "The Shazam of Video Shopping — a Chrome extension that transforms any YouTube video into an instant shopping experience. Uses Gemini 3 Flash for real-time product detection and a Commerce Agent with A2A protocol for intelligent price comparison.",
-    tags: ["Chrome Extension", "Gemini 3", "A2A Protocol", "FastAPI", "Plasmo", "Google ADK"],
-    type: "AI Vision / Commerce",
     icon: <ShoppingBag className="text-cyan-400" size={22} />,
     glowColor: "rgba(34, 211, 238, 0.12)",
     repo: "https://github.com/ChristChad-mv/vishop",
-    details: "https://www.youtube.com/watch?v=Oy2QY5pN_nY"
+    details: "https://www.youtube.com/watch?v=Oy2QY5pN_nY",
+    tags: ["Chrome Extension", "Gemini 3", "A2A Protocol", "FastAPI", "Plasmo", "Google ADK"]
   },
   {
-    title: "Aura AI",
-    description: "Voice-powered digital assistant and study workspace unifying email, calendar, files, and music through natural conversations. Features a full RAG study system with AI flashcards, quizzes, and document Q&A powered by Vertex AI.",
-    tags: ["FastAPI", "React", "Google ADK", "Vertex AI RAG", "Supabase", "Cloud Run"],
-    type: "Full-Stack / AI Assistant",
     icon: <Zap className="text-amber-400" size={22} />,
     glowColor: "rgba(251, 191, 36, 0.12)",
     repo: "https://github.com/ChristChad-mv/aura_ai",
-    details: "https://aura-ai-five.vercel.app"
+    details: "#",
+    tags: ["FastAPI", "React", "Google ADK", "Vertex AI RAG", "Supabase", "Cloud Run"]
   }
 ];
 
 export default function Projects() {
+  const { t } = useTranslation();
+
+  const translatedProjects = t('proj_list') as Array<{
+    title: string;
+    description: string;
+    type: string;
+  }>;
+
+  // Combine static config (icons, repos, tags) with translated content
+  const projects = PROJECT_CONFIGS.map((config, index) => ({
+    ...config,
+    ...translatedProjects[index]
+  }));
+
   return (
     <section id="projects" className="py-32 px-4 md:px-12 max-w-7xl mx-auto">
       {/* Section Header */}
       <div className="mb-20 flex flex-col md:flex-row justify-between items-end gap-8">
         <div>
-          <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-2">Selected Works</h2>
+          <h2 className="text-xs font-black tracking-[0.2em] uppercase text-white/40 mb-2">{t('proj_title')}</h2>
           <div className="text-4xl md:text-6xl font-light text-white leading-tight">
-            Featured <br />
-            <span className="italic font-serif text-indigo-300">Projects.</span>
+            {t('proj_subtitle')}
           </div>
         </div>
         <div className="w-full h-[1px] bg-white/10 mb-4 flex-1 hidden md:block mx-8" />
@@ -63,13 +65,13 @@ export default function Projects() {
           rel="noreferrer" 
           className="text-indigo-400 hover:text-indigo-300 max-w-xs text-xs font-mono font-semibold uppercase tracking-widest flex items-center gap-2 group transition-colors"
         >
-          View All Projects <Sparkles className="group-hover:translate-x-1 transition-transform" size={14} />
+          {t('proj_all')} <Sparkles className="group-hover:translate-x-1 transition-transform" size={14} />
         </a>
       </div>
 
       {/* Uniform 2-Column Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {PROJECTS.map((project, index) => {
+        {projects.map((project, index) => {
           const isYoutube = project.details.includes('youtube');
           const isLive = project.details.startsWith('https') && !isYoutube;
           return (
@@ -157,3 +159,4 @@ export default function Projects() {
     </section>
   );
 }
+

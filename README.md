@@ -1,6 +1,6 @@
 # Christ Chadrak Mvoungou — Software Engineer & Applied AI
 
-![Portfolio Preview](./public/favicon.svg)
+<img src="./public/favicon.svg" alt="CM Logo" width="120" />
 
 > **"Engineering the future of systems."**
 
