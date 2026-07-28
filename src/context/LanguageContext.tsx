@@ -83,6 +83,12 @@ export const translations = {
     proj_all: "Voir tous les projets",
     proj_list: [
       {
+        title: "JurisBox",
+        description: "Suite logicielle d'aide à la décision juridique 100% hors-ligne pour le droit OHADA. Moteur vectoriel propriétaire QuantixDB (Rust/SIMD), chunker hiérarchique, embeddings BGE-M3 ONNX et inférence LLM locale chiffrée (SQLCipher, Tauri sidecar).",
+        tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "LLM Local", "SQLCipher"],
+        type: "IA Souveraine / Hors-Ligne & Systèmes",
+      },
+      {
         title: "CareFlow",
         description: "Suivi post-hospitalisation des patients via une IA médicale double-agent. Automatisation des suivis téléphoniques selon les protocoles AHRQ RED et tri instantané des réadmissions à haut risque sur un tableau de bord infirmier.",
         tags: ["Python", "Next.js", "LangGraph", "Twilio", "Firestore", "Cloud Scheduler"],
@@ -95,16 +101,10 @@ export const translations = {
         type: "Systèmes / Streaming Multimodal",
       },
       {
-        title: "ViShop",
-        description: "Le Shazam du Video Shopping — une extension Chrome qui transforme n'importe quelle vidéo YouTube en expérience d'achat instantanée. Utilise Gemini 3 Flash pour la détection de produits en temps réel et un agent commercial avec protocole A2A pour comparer intelligemment les prix.",
-        tags: ["Chrome Extension", "Gemini 3", "A2A Protocol", "FastAPI", "Plasmo", "Google ADK"],
-        type: "Vision par IA / E-commerce",
-      },
-      {
-        title: "Aura AI",
-        description: "Assistant numérique à commande vocale et espace de travail unifié (e-mail, calendrier, fichiers, musique) via conversations naturelles. Comprend un système d'apprentissage RAG complet avec flashcards IA, quiz et Q&A sur documents alimenté par Vertex AI.",
-        tags: ["FastAPI", "React", "Google ADK", "Vertex AI RAG", "Supabase", "Cloud Run"],
-        type: "Full-Stack / Assistant IA",
+        title: "Open SWE",
+        description: "Assistant de développement local-first offrant un contrôle total sur le workflow d'ingénierie grâce à des compétences explicites (/grill-with-docs, /to-spec, /to-tickets, /implement). Il exécute les tâches en sandbox isolé, produit des spécifications durables dans .agents/, génère des plans révisables et automatise la création de Merge Requests GitLab.",
+        tags: ["Python", "LangGraph", "FastAPI", "React", "GitLab API", "Workflows Agentiques", "Sandbox"],
+        type: "IA Agentique / Génie Logiciel",
       }
     ],
 
@@ -209,6 +209,12 @@ export const translations = {
     proj_all: "View All Projects",
     proj_list: [
       {
+        title: "JurisBox",
+        description: "Sovereign, 100% offline legal AI decision-support suite for OHADA law. Built with custom Rust vector engine QuantixDB (SIMD), hierarchical legal chunking, ONNX BGE-M3 embeddings, and encrypted local LLM inference (SQLCipher, Tauri).",
+        tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "Local LLM", "SQLCipher"],
+        type: "Sovereign / Offline AI & Systems",
+      },
+      {
         title: "CareFlow",
         description: "Post-hospitalization patient monitoring with dual-agent medical AI. Automates telephone check-ins following AHRQ RED protocols and instantly triages high-risk readmissions to a nurse dashboard.",
         tags: ["Python", "Next.js", "LangGraph", "Twilio", "Firestore", "Cloud Scheduler"],
@@ -221,16 +227,10 @@ export const translations = {
         type: "Systems / Multimodal Streaming",
       },
       {
-        title: "ViShop",
-        description: "The Shazam of Video Shopping — a Chrome extension that transforms any YouTube video into an instant shopping experience. Uses Gemini 3 Flash for real-time product detection and a Commerce Agent with A2A protocol for intelligent price comparison.",
-        tags: ["Chrome Extension", "Gemini 3", "A2A Protocol", "FastAPI", "Plasmo", "Google ADK"],
-        type: "AI Vision / Commerce",
-      },
-      {
-        title: "Aura AI",
-        description: "Voice-powered digital assistant and study workspace unifying email, calendar, files, and music through natural conversations. Features a full RAG study system with AI flashcards, quizzes, and document Q&A powered by Vertex AI.",
-        tags: ["FastAPI", "React", "Google ADK", "Vertex AI RAG", "Supabase", "Cloud Run"],
-        type: "Full-Stack / AI Assistant",
+        title: "Open SWE",
+        description: "Local-first software engineering assistant offering total workflow control through structured skills (/grill-with-docs, /to-spec, /to-tickets, /implement). Executes tasks in thread-isolated sandboxes, maintains durable repo specs in .agents/, enforces reviewable execution plans, and automates GitLab Merge Requests.",
+        tags: ["Python", "LangGraph", "FastAPI", "React", "GitLab API", "Agentic Workflows", "Sandbox"],
+        type: "Agentic AI / SWE Assistant",
       }
     ],
 
