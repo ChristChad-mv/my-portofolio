@@ -38,7 +38,7 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     id: 'open-swe',
-    title: 'Open SWE',
+    title: 'Forge IA',
     featured: true,
     type: {
       fr: 'Assistant de développement · Automatisation · Agents IA',
