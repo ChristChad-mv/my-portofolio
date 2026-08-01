@@ -101,7 +101,7 @@ export const translations = {
         type: "Systèmes / Streaming Multimodal",
       },
       {
-        title: "Open SWE",
+        title: "Forge IA",
         description: "Assistant de développement local-first offrant un contrôle total sur le workflow d'ingénierie grâce à des compétences explicites (/grill-with-docs, /to-spec, /to-tickets, /implement). Il exécute les tâches en sandbox isolé, produit des spécifications durables dans .agents/, génère des plans révisables et automatise la création de Merge Requests GitLab.",
         tags: ["Python", "LangGraph", "FastAPI", "React", "GitLab API", "Workflows Agentiques", "Sandbox"],
         type: "IA Agentique / Génie Logiciel",
@@ -227,7 +227,7 @@ export const translations = {
         type: "Systems / Multimodal Streaming",
       },
       {
-        title: "Open SWE",
+        title: "Forge IA",
         description: "Local-first software engineering assistant offering total workflow control through structured skills (/grill-with-docs, /to-spec, /to-tickets, /implement). Executes tasks in thread-isolated sandboxes, maintains durable repo specs in .agents/, enforces reviewable execution plans, and automates GitLab Merge Requests.",
         tags: ["Python", "LangGraph", "FastAPI", "React", "GitLab API", "Agentic Workflows", "Sandbox"],
         type: "Agentic AI / SWE Assistant",
