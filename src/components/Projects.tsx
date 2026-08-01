@@ -68,7 +68,8 @@ export default function Projects() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {featuredProjects.map((project, index) => {
           const isYoutube = project.details.includes('youtube');
-          const isLive = project.details.startsWith('https') && !isYoutube;
+          const hasExternalLink = project.details.startsWith('https') && !isYoutube;
+          const isOfficialSite = project.id === 'careflow';
           const typeText = project.type[language as 'fr' | 'en'] || project.type.fr;
           const descText = project.description[language as 'fr' | 'en'] || project.description.fr;
 
@@ -99,9 +100,9 @@ export default function Projects() {
                     <span className="text-[10px] text-slate-300 font-mono font-semibold uppercase tracking-widest">
                       {typeText}
                     </span>
-                    {isLive && (
+                    {hasExternalLink && isOfficialSite && (
                       <span className="ml-auto px-2.5 py-0.5 text-[8px] font-mono font-bold uppercase tracking-widest rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/20">
-                        ● Live
+                        {language === 'fr' ? 'Site officiel' : 'Official site'}
                       </span>
                     )}
                   </div>
@@ -145,7 +146,11 @@ export default function Projects() {
                         className="flex items-center gap-2 text-xs font-mono text-indigo-400 hover:text-indigo-300 transition-colors ml-auto uppercase tracking-wider"
                       >
                         {isYoutube ? <Youtube size={14} /> : <ExternalLink size={14} />}{' '}
-                        {isYoutube ? 'Demo Video' : 'Live Preview'}
+                        {isYoutube
+                          ? 'Demo Video'
+                          : isOfficialSite
+                            ? language === 'fr' ? 'Site officiel' : 'Official site'
+                            : language === 'fr' ? 'Voir le projet' : 'View project'}
                       </a>
                     )}
                   </div>
@@ -165,10 +170,10 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full max-w-5xl max-h-[85vh] bg-[#0c0c10] border border-white/10 rounded-3xl p-6 md:p-10 overflow-y-auto shadow-2xl flex flex-col justify-between"
+              className="relative w-full max-w-5xl max-h-[85vh] bg-[#0c0c10] border border-white/10 rounded-3xl p-6 md:p-10 overflow-y-auto shadow-2xl flex flex-col justify-between overscroll-contain"
             >
               {/* Modal Header */}
-              <div className="flex items-center justify-between pb-6 border-b border-white/10 mb-8 sticky top-0 bg-[#0c0c10]/90 backdrop-blur-md z-20">
+              <div className="flex items-center justify-between pb-6 border-b border-white/10 mb-8 bg-[#0c0c10] shrink-0">
                 <div>
                   <h3 className="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-1">
                     {language === 'fr' ? 'Archive Complète' : 'Full Repository'}
@@ -191,6 +196,7 @@ export default function Projects() {
                   const typeText = project.type[language as 'fr' | 'en'] || project.type.fr;
                   const descText = project.description[language as 'fr' | 'en'] || project.description.fr;
                   const isYoutube = project.details.includes('youtube');
+                  const isOfficialSite = project.id === 'careflow';
 
                   return (
                     <div
@@ -208,11 +214,6 @@ export default function Projects() {
                               {typeText}
                             </p>
                           </div>
-                          {project.featured && (
-                            <span className="ml-auto px-2 py-0.5 text-[8px] font-mono font-bold uppercase tracking-widest rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-                              Top 4
-                            </span>
-                          )}
                         </div>
 
                         <p className="text-xs text-slate-400 font-light leading-relaxed mb-6">
@@ -251,7 +252,11 @@ export default function Projects() {
                               className="flex items-center gap-1.5 text-[11px] font-mono text-indigo-400 hover:text-indigo-300 ml-auto"
                             >
                               {isYoutube ? <Youtube size={13} /> : <ExternalLink size={13} />}{' '}
-                              {isYoutube ? 'Demo' : 'Link'}
+                              {isYoutube
+                                ? 'Demo'
+                                : isOfficialSite
+                                  ? language === 'fr' ? 'Site officiel' : 'Official site'
+                                  : language === 'fr' ? 'Lien' : 'Link'}
                             </a>
                           )}
                         </div>
