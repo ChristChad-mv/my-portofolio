@@ -19,29 +19,29 @@ export const translations = {
     nav_skills: "Compétences",
     nav_resume: "CV",
     nav_contact: "Contact",
-    nav_role: "Génie Logiciel & IA",
+    nav_role: "Ingénierie logicielle & IA",
 
     // Hero
-    hero_badge: "Ingénieur Logiciel · IA Appliquée",
-    hero_tagline: "Je construis des systèmes distribués et des agents IA.",
-    hero_bio: "Étudiant ingénieur à Polytech Tours. Je conçois des backends scalables, des systèmes temps réel et des architectures d’agents autonomes. Actuellement chez SNCF Voyageurs.",
-    hero_cta: "Voir les Projets",
+    hero_badge: "Ingénieur logiciel · Intelligence artificielle",
+    hero_tagline: "Je transforme des idées complexes en solutions utiles.",
+    hero_bio: "Étudiant ingénieur à Polytech Tours, je conçois des applications robustes, des systèmes en temps réel et des solutions basées sur l’IA. Je travaille actuellement sur des projets d’IA appliquée chez SNCF Voyageurs.",
+    hero_cta: "Découvrir mes projets",
 
     // About
     about_title: "À propos",
-    about_subtitle: "Façonner des systèmes robustes et intelligents.",
-    about_p1: "Je suis étudiant en ingénierie logicielle à Polytech Tours, spécialisé dans la conception de systèmes backend distribués et d’applications IA.",
-    about_p2: "Je travaille à l’intersection de trois axes :",
-    about_axis1: "architecture backend scalable",
-    about_axis2: "systèmes temps réel (WebSockets, streaming)",
-    about_axis3: "intelligence artificielle appliquée (agents, orchestration, LLMs)",
-    about_p3: "J’ai conçu des architectures de services et des API scalables, développé des systèmes temps réel distribués, et déployé des solutions d’intelligence artificielle combinant agents intelligents et modèles de langage (LLMs).",
-    about_p4: "Mon objectif est simple : construire des systèmes fiables, capables de traiter de l’information complexe en temps réel.",
+    about_subtitle: "Concevoir des solutions utiles, fiables et bien pensées.",
+    about_p1: "Je suis étudiant ingénieur en informatique à Polytech Tours, avec un intérêt particulier pour le développement backend et l’intelligence artificielle.",
+    about_p2: "Mes principaux domaines de travail sont :",
+    about_axis1: "développement backend et conception d’API",
+    about_axis2: "applications et échanges en temps réel",
+    about_axis3: "intelligence artificielle appliquée et agents IA",
+    about_p3: "Mes projets m’ont amené à concevoir des API, des applications en temps réel et des solutions utilisant des agents IA et des modèles de langage.",
+    about_p4: "J’aime transformer des problématiques complexes en outils concrets, fiables et faciles à utiliser.",
     about_cv: "Télécharger le CV",
 
     // Experience
     exp_title: "Parcours",
-    exp_subtitle: "Expérience Professionnelle.",
+    exp_subtitle: "Les expériences qui ont façonné mon parcours.",
     exp_positions: "Postes",
     exp_current: "Actuel",
     exp_list: [
@@ -78,8 +78,8 @@ export const translations = {
     ],
 
     // Projects
-    proj_title: "Projets Sélectionnés",
-    proj_subtitle: "Projets Phares.",
+    proj_title: "Projets sélectionnés",
+    proj_subtitle: "Quelques réalisations dont je suis fier.",
     proj_all: "Voir tous les projets",
     proj_list: [
       {
@@ -109,32 +109,32 @@ export const translations = {
     ],
 
     // Skills
-    skills_title: "Expertises & Stack",
-    skills_subtitle: "Compétences Clés.",
-    skills_intro: "Étudiant ingénieur à Polytech Tours. Je fais le lien entre l'ingénierie des systèmes haute performance, l'architecture cloud et l'IA agentique moderne pour concevoir des produits à la pointe.",
+    skills_title: "Compétences & technologies",
+    skills_subtitle: "Ce que je mets au service de mes projets.",
+    skills_intro: "Je développe des applications en combinant ingénierie backend, infrastructure cloud et intelligence artificielle. Je privilégie des solutions performantes, maintenables et adaptées aux besoins réels.",
     skills_categories: [
       {
         title: "IA & Systèmes Intelligents",
-        description: "Conception de workflows autonomes, frameworks multi-agents et intégrations d'IA multimodales."
+        description: "Conception d’agents IA, de workflows automatisés et d’expériences multimodales."
       },
       {
         title: "Backend & Architectures",
-        description: "Conception de points de terminaison de streaming à faible latence, systèmes distribués et WebSockets temps réel."
+        description: "Création d’API, de services backend et de systèmes de communication en temps réel."
       },
       {
         title: "Langages",
-        description: "Développement de code typé, optimisé et performant pour les systèmes backend."
+        description: "Écriture de code lisible, typé et performant, adapté aux besoins du produit."
       },
       {
         title: "Cloud & Infrastructure",
-        description: "Automatisation du scaling serverless, déploiements immuables et schémas de bases de données multi-locataires."
+        description: "Déploiement d’applications cloud, automatisation de l’infrastructure et conception de bases de données."
       }
     ],
 
     // Contact
-    contact_subtitle: "Bâtissons des architectures.",
-    contact_intro: "Actuellement spécialisé en conception de systèmes et en IA appliquée chez SNCF Voyageurs. Je suis toujours ouvert à discuter de nouveaux défis logiciels, de backends distribués ou d'opportunités en ingénierie agentique.",
-    contact_badge: "Ouvert aux opportunités",
+    contact_subtitle: "Construisons quelque chose d’utile.",
+    contact_intro: "Une idée, un projet ou une opportunité ? Je suis disponible pour échanger autour du développement logiciel, des systèmes backend et de l’intelligence artificielle appliquée.",
+    contact_badge: "Disponible pour échanger",
     contact_footer: "© 2026 CHRIST CHADRAK MVOUNGOU. TOUS DROITS RÉSERVÉS."
   },
   en: {
@@ -145,29 +145,29 @@ export const translations = {
     nav_skills: "Skills",
     nav_resume: "Resume",
     nav_contact: "Contact",
-    nav_role: "SWE & AI",
+    nav_role: "Software Engineering & AI",
 
     // Hero
-    hero_badge: "Software Engineer · Applied AI",
-    hero_tagline: "I build distributed systems and AI agents.",
-    hero_bio: "Software engineering student at Polytech Tours. I design scalable backends, real-time systems, and autonomous agent architectures. Currently at SNCF Voyageurs.",
-    hero_cta: "View Projects",
+    hero_badge: "Software Engineer · Artificial Intelligence",
+    hero_tagline: "I turn complex ideas into useful solutions.",
+    hero_bio: "An engineering student at Polytech Tours, I build robust applications, real-time systems, and AI-powered solutions. I currently work on applied AI projects at SNCF Voyageurs.",
+    hero_cta: "Explore My Projects",
 
     // About
     about_title: "About Me",
-    about_subtitle: "Shaping robust and intelligent systems.",
-    about_p1: "I am a software engineering student at Polytech Tours, specializing in the design of distributed backend systems and AI applications.",
-    about_p2: "I operate at the intersection of three core areas:",
-    about_axis1: "scalable backend architecture",
-    about_axis2: "real-time systems (WebSockets, streaming)",
-    about_axis3: "applied artificial intelligence (agents, orchestration, LLMs)",
-    about_p3: "I have designed scalable service architectures and APIs, developed distributed real-time systems, and deployed artificial intelligence solutions combining intelligent agents and large language models (LLMs).",
-    about_p4: "My goal is straightforward: build reliable systems capable of processing complex information in real-time.",
+    about_subtitle: "Designing useful, reliable, and thoughtful solutions.",
+    about_p1: "I am a computer engineering student at Polytech Tours with a particular interest in backend development and artificial intelligence.",
+    about_p2: "My main areas of focus are:",
+    about_axis1: "backend development and API design",
+    about_axis2: "real-time applications and communication",
+    about_axis3: "applied artificial intelligence and AI agents",
+    about_p3: "My projects have led me to design APIs, real-time applications, and solutions built with AI agents and language models.",
+    about_p4: "I enjoy turning complex problems into practical, reliable, and easy-to-use tools.",
     about_cv: "Download Resume",
 
     // Experience
     exp_title: "Career Path",
-    exp_subtitle: "Work Experience.",
+    exp_subtitle: "The experiences that shaped my journey.",
     exp_positions: "Positions",
     exp_current: "Current",
     exp_list: [
@@ -204,8 +204,8 @@ export const translations = {
     ],
 
     // Projects
-    proj_title: "Selected Works",
-    proj_subtitle: "Featured Projects.",
+    proj_title: "Selected Projects",
+    proj_subtitle: "A few projects I am proud of.",
     proj_all: "View All Projects",
     proj_list: [
       {
@@ -235,32 +235,32 @@ export const translations = {
     ],
 
     // Skills
-    skills_title: "Expertise & Stack",
-    skills_subtitle: "Core Capabilities.",
-    skills_intro: "Engineering student at Polytech Tours. I bridge the gap between high-performance systems engineering, cloud architecture, and modern agentic AI to build bleeding-edge products.",
+    skills_title: "Skills & Technologies",
+    skills_subtitle: "What I bring to each project.",
+    skills_intro: "I build applications by combining backend engineering, cloud infrastructure, and artificial intelligence. I focus on solutions that are performant, maintainable, and grounded in real needs.",
     skills_categories: [
       {
         title: "AI & Intelligent Systems",
-        description: "Building autonomous workflows, multi-agent frameworks, and multimodal AI integrations."
+        description: "Designing AI agents, automated workflows, and multimodal experiences."
       },
       {
         title: "Backend & Architectures",
-        description: "Designing low-latency streaming endpoints, distributed systems, and real-time WebSockets."
+        description: "Building APIs, backend services, and real-time communication systems."
       },
       {
         title: "Languages",
-        description: "Writing type-safe, optimized, and performant code for backend systems."
+        description: "Writing clear, type-safe, and efficient code that serves the product."
       },
       {
         title: "Cloud & Infrastructure",
-        description: "Automating serverless scaling, immutable deployments, and multi-tenant DB schemas."
+        description: "Deploying cloud applications, automating infrastructure, and designing databases."
       }
     ],
 
     // Contact
-    contact_subtitle: "Let's build architectures.",
-    contact_intro: "Currently specializing in Systems Design and Applied AI at SNCF Voyageurs. I am always open to discussing new software challenges, distributed backends, or agentic engineering opportunities.",
-    contact_badge: "Open for Opportunities",
+    contact_subtitle: "Let’s build something useful.",
+    contact_intro: "Have an idea, a project, or an opportunity? I am always happy to discuss software development, backend systems, and applied artificial intelligence.",
+    contact_badge: "Available to Connect",
     contact_footer: "© 2026 CHRIST CHADRAK MVOUNGOU. ALL RIGHTS RESERVED."
   }
 };
