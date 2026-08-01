@@ -84,9 +84,9 @@ export const translations = {
     proj_list: [
       {
         title: "JurisBox",
-        description: "Suite logicielle d'aide à la décision juridique 100% hors-ligne pour le droit OHADA. Moteur vectoriel propriétaire QuantixDB (Rust/SIMD), chunker hiérarchique, embeddings BGE-M3 ONNX et inférence LLM locale chiffrée (SQLCipher, Tauri sidecar).",
+        description: "Infrastructure d’intelligence juridique privée pour le droit OHADA, associant une appliance matérielle, des modèles open source dont Mistral, un corpus local et QuantixDB. Les documents confidentiels et l’inférence restent entièrement sur site.",
         tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "LLM Local", "SQLCipher"],
-        type: "IA Souveraine / Hors-Ligne & Systèmes",
+        type: "Infrastructure d’IA Juridique Privée",
       },
       {
         title: "CareFlow",
@@ -102,8 +102,8 @@ export const translations = {
       },
       {
         title: "Forge IA",
-        description: "Assistant de développement local-first offrant un contrôle total sur le workflow d'ingénierie grâce à des compétences explicites (/grill-with-docs, /to-spec, /to-tickets, /implement). Il exécute les tâches en sandbox isolé, produit des spécifications durables dans .agents/, génère des plans révisables et automatise la création de Merge Requests GitLab.",
-        tags: ["Python", "LangGraph", "FastAPI", "React", "GitLab API", "Workflows Agentiques", "Sandbox"],
+        description: "Agent de développement local utilisé sur mes projets personnels. Il transforme les demandes en spécifications et plans d’implémentation, exécute les tâches dans des environnements isolés et s’intègre aux workflows GitHub.",
+        tags: ["Python", "LangGraph", "FastAPI", "React", "GitHub API", "Workflows Agentiques", "Sandbox"],
         type: "IA Agentique / Génie Logiciel",
       }
     ],
@@ -135,6 +135,12 @@ export const translations = {
     contact_subtitle: "Construisons quelque chose d’utile.",
     contact_intro: "Une idée, un projet ou une opportunité ? Je suis disponible pour échanger autour du développement logiciel, des systèmes backend et de l’intelligence artificielle appliquée.",
     contact_badge: "Disponible pour échanger",
+    contact_form_name: "Votre nom",
+    contact_form_name_placeholder: "Comment vous appelez-vous ?",
+    contact_form_message: "Votre idée ou votre message",
+    contact_form_message_placeholder: "Parlez-moi de votre projet, de votre idée ou de l’opportunité que vous souhaitez discuter.",
+    contact_form_whatsapp: "Continuer sur WhatsApp",
+    contact_form_note: "Aucune donnée n’est envoyée par ce site. Votre message sera préparé, puis vous déciderez de l’envoyer dans WhatsApp.",
     contact_footer: "© 2026 CHRIST CHADRAK MVOUNGOU. TOUS DROITS RÉSERVÉS."
   },
   en: {
@@ -210,9 +216,9 @@ export const translations = {
     proj_list: [
       {
         title: "JurisBox",
-        description: "Sovereign, 100% offline legal AI decision-support suite for OHADA law. Built with custom Rust vector engine QuantixDB (SIMD), hierarchical legal chunking, ONNX BGE-M3 embeddings, and encrypted local LLM inference (SQLCipher, Tauri).",
+        description: "Private legal AI infrastructure for OHADA law combining a dedicated hardware appliance, open-source models including Mistral, a local legal corpus, and QuantixDB. Confidential documents and inference remain entirely on-premise.",
         tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "Local LLM", "SQLCipher"],
-        type: "Sovereign / Offline AI & Systems",
+        type: "Private Legal AI Infrastructure",
       },
       {
         title: "CareFlow",
@@ -228,8 +234,8 @@ export const translations = {
       },
       {
         title: "Forge IA",
-        description: "Local-first software engineering assistant offering total workflow control through structured skills (/grill-with-docs, /to-spec, /to-tickets, /implement). Executes tasks in thread-isolated sandboxes, maintains durable repo specs in .agents/, enforces reviewable execution plans, and automates GitLab Merge Requests.",
-        tags: ["Python", "LangGraph", "FastAPI", "React", "GitLab API", "Agentic Workflows", "Sandbox"],
+        description: "A local-first development agent used across my personal projects. It turns requests into specifications and implementation plans, executes tasks in isolated environments, and integrates with GitHub workflows.",
+        tags: ["Python", "LangGraph", "FastAPI", "React", "GitHub API", "Agentic Workflows", "Sandbox"],
         type: "Agentic AI / SWE Assistant",
       }
     ],
@@ -261,6 +267,12 @@ export const translations = {
     contact_subtitle: "Let’s build something useful.",
     contact_intro: "Have an idea, a project, or an opportunity? I am always happy to discuss software development, backend systems, and applied artificial intelligence.",
     contact_badge: "Available to Connect",
+    contact_form_name: "Your name",
+    contact_form_name_placeholder: "What should I call you?",
+    contact_form_message: "Your idea or message",
+    contact_form_message_placeholder: "Tell me about your project, your idea, or the opportunity you would like to discuss.",
+    contact_form_whatsapp: "Continue on WhatsApp",
+    contact_form_note: "No data is sent by this website. Your message will be prepared, and you will choose whether to send it in WhatsApp.",
     contact_footer: "© 2026 CHRIST CHADRAK MVOUNGOU. ALL RIGHTS RESERVED."
   }
 };
