@@ -1,9 +1,22 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight, Mail, Linkedin, Github, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail, Linkedin, Github, Phone, MessageCircle } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const { language, t } = useTranslation();
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+
+  const openWhatsApp = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const greeting = language === 'fr' ? 'Bonjour Christ' : 'Hello Christ';
+    const introduction = language === 'fr'
+      ? `Je m’appelle ${name}. Je vous contacte depuis votre portfolio.`
+      : `My name is ${name}. I am contacting you from your portfolio.`;
+    const whatsappMessage = `${greeting},\n\n${introduction}\n\n${message}`;
+    window.open(`https://wa.me/33744533386?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <>
@@ -28,6 +41,46 @@ export default function Contact() {
             <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
             <span className="text-[10px] font-semibold tracking-widest text-indigo-300 uppercase">{t('contact_badge')}</span>
           </div>
+
+          <form onSubmit={openWhatsApp} className="p-5 rounded-2xl border border-white/10 bg-white/[0.025] space-y-3">
+            <div>
+              <label htmlFor="contact-name" className="block text-[10px] uppercase tracking-widest text-slate-400 mb-2">
+                {t('contact_form_name')}
+              </label>
+              <input
+                id="contact-name"
+                type="text"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                required
+                className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none transition-colors placeholder:text-slate-600 focus:border-indigo-500/50"
+                placeholder={t('contact_form_name_placeholder')}
+              />
+            </div>
+            <div>
+              <label htmlFor="contact-message" className="block text-[10px] uppercase tracking-widest text-slate-400 mb-2">
+                {t('contact_form_message')}
+              </label>
+              <textarea
+                id="contact-message"
+                value={message}
+                onChange={(event) => setMessage(event.target.value)}
+                required
+                rows={4}
+                className="w-full resize-none rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm leading-relaxed text-white outline-none transition-colors placeholder:text-slate-600 focus:border-indigo-500/50"
+                placeholder={t('contact_form_message_placeholder')}
+              />
+            </div>
+            <button
+              type="submit"
+              className="flex w-full items-center justify-center gap-2 rounded-xl border border-emerald-500/25 bg-emerald-500/10 px-4 py-3 text-xs font-semibold text-emerald-300 transition-colors hover:border-emerald-500/50 hover:bg-emerald-500/15 cursor-pointer"
+            >
+              <MessageCircle size={16} /> {t('contact_form_whatsapp')}
+            </button>
+            <p className="text-[9px] leading-relaxed text-slate-500">
+              {t('contact_form_note')}
+            </p>
+          </form>
 
           <a href="mailto:ccmvoungou@gmail.com" className="group flex items-center justify-between gap-8 p-4 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-indigo-500/30 transition-all text-xs font-semibold text-slate-300 hover:text-white">
             <span className="flex items-center gap-3"><Mail size={16} className="text-indigo-400" /> Email</span>
