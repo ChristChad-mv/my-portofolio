@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, Mail, Linkedin, Github, Phone, MessageCircle } from 'lucide-react';
 import { useTranslation } from '../context/LanguageContext';
@@ -8,7 +8,7 @@ export default function Contact() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
 
-  const openWhatsApp = (event: React.FormEvent<HTMLFormElement>) => {
+  const openWhatsApp = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const greeting = language === 'fr' ? 'Bonjour Christ' : 'Hello Christ';
     const introduction = language === 'fr'
