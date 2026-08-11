@@ -42,8 +42,9 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   const siteUrl = normalizeSiteUrl(
     env.VITE_SITE_URL ||
-      env.VERCEL_PROJECT_PRODUCTION_URL ||
-      env.VITE_VERCEL_PROJECT_PRODUCTION_URL,
+      process.env.VITE_SITE_URL ||
+      process.env.VERCEL_PROJECT_PRODUCTION_URL ||
+      process.env.VITE_VERCEL_PROJECT_PRODUCTION_URL,
   );
 
   return {
