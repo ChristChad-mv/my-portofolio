@@ -16,18 +16,17 @@ This is the source code for my personal portfolio, showcasing my work at the int
 
 ## 🌟 Featured Projects Included
 
-1. **Aura AI** - Voice-powered digital assistant with Vertex AI RAG.
-2. **ViShop** - The Shazam of Video Shopping.
-3. **CareFlow** - Dual-agent medical AI for post-hospitalization monitoring.
-4. **MockInterview.ai** - Multimodal AI interview simulator using WebSockets.
+1. **JurisBox** - On-premise legal AI infrastructure using open models including Mistral and Gemma 4.
+2. **Forge IA** - Local-first AI coding assistant.
+3. **MockInterview.ai** - Multimodal AI interview simulator using WebSockets.
 
 ## 🛠️ Local Development
 
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/ChristChad-mv/creative-ai-portfolio.git
-cd creative-ai-portfolio
+git clone https://github.com/ChristChad-mv/my-portofolio.git
+cd my-portofolio
 npm install
 ```
 
