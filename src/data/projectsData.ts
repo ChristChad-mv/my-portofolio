@@ -27,10 +27,10 @@ export const PROJECTS_DATA: Project[] = [
       en: 'Private Legal AI Infrastructure · OHADA Law',
     },
     description: {
-      fr: "Une infrastructure d’intelligence juridique privée conçue pour le droit OHADA. JurisBox associe une appliance matérielle prête à l’emploi à des modèles open source, dont Mistral, un corpus juridique local et QuantixDB, un moteur vectoriel développé en Rust. Les professionnels peuvent analyser leurs documents confidentiels sur site, même avec une connectivité ou des ressources informatiques limitées.",
-      en: 'A private legal AI infrastructure designed for OHADA law. JurisBox combines a ready-to-use hardware appliance with open-source models, including Mistral models, a local legal corpus, and QuantixDB, an embedded Rust vector engine. Legal professionals can analyze confidential documents on-premise, even with constrained connectivity or computing resources.',
+      fr: "Une infrastructure d’intelligence juridique privée conçue pour le droit OHADA. JurisBox associe une appliance matérielle prête à l’emploi à des modèles open source, dont Mistral et Gemma 4, un corpus juridique local et QuantixDB, un moteur vectoriel développé en Rust. Les professionnels peuvent analyser leurs documents confidentiels sur site, même avec une connectivité ou des ressources informatiques limitées.",
+      en: 'A private legal AI infrastructure designed for OHADA law. JurisBox combines a ready-to-use hardware appliance with open-source models, including Mistral and Gemma 4, a local legal corpus, and QuantixDB, an embedded Rust vector engine. Legal professionals can analyze confidential documents on-premise, even with constrained connectivity or computing resources.',
     },
-    tags: ['Python', 'Rust', 'Mistral', 'ONNX', 'Tauri', 'QuantixDB', 'SQLCipher'],
+    tags: ['Python', 'Rust', 'Mistral', 'Gemma 4', 'ONNX', 'Tauri', 'QuantixDB', 'SQLCipher'],
     repo: '#',
     details: '#',
     glowColor: 'rgba(16, 185, 129, 0.15)',
@@ -53,24 +53,6 @@ export const PROJECTS_DATA: Project[] = [
     details: '#',
     glowColor: 'rgba(34, 211, 238, 0.15)',
     iconName: 'bot',
-  },
-  {
-    id: 'careflow',
-    title: 'CareFlow',
-    featured: true,
-    type: {
-      fr: 'IA appliquée à la santé · Système multi-agent',
-      en: 'Applied Healthcare AI · Multi-Agent System',
-    },
-    description: {
-      fr: "Une solution de suivi destinée aux patients après leur sortie de l’hôpital. Des agents IA automatisent les appels de suivi, analysent les réponses et signalent au personnel soignant les situations présentant un risque élevé de réadmission.",
-      en: 'A patient follow-up solution designed for the period after hospital discharge. AI agents automate follow-up calls, analyze responses, and alert clinical staff to situations with a high risk of readmission.',
-    },
-    tags: ['Python', 'Next.js', 'LangGraph', 'Twilio', 'Firestore', 'Cloud Scheduler'],
-    repo: '#',
-    details: 'https://careflow-pulse.vercel.app/',
-    glowColor: 'rgba(99, 102, 241, 0.15)',
-    iconName: 'brain',
   },
   {
     id: 'mockinterview',
