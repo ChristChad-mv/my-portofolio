@@ -68,8 +68,6 @@ export default function Projects() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {featuredProjects.map((project, index) => {
           const isYoutube = project.details.includes('youtube');
-          const hasExternalLink = project.details.startsWith('https') && !isYoutube;
-          const isOfficialSite = project.id === 'careflow';
           const typeText = project.type[language as 'fr' | 'en'] || project.type.fr;
           const descText = project.description[language as 'fr' | 'en'] || project.description.fr;
 
@@ -99,13 +97,7 @@ export default function Projects() {
                     </div>
                     <span className="text-[10px] text-slate-300 font-mono font-semibold uppercase tracking-widest">
                       {typeText}
-                    </span>
-                    {hasExternalLink && isOfficialSite && (
-                      <span className="ml-auto px-2.5 py-0.5 text-[8px] font-mono font-bold uppercase tracking-widest rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/20">
-                        {language === 'fr' ? 'Site officiel' : 'Official site'}
-                      </span>
-                    )}
-                  </div>
+                    </span>                  </div>
 
                   <h3 className="text-xl md:text-2xl font-semibold text-white mb-3 group-hover:text-indigo-200 transition-colors">
                     {project.title}
@@ -146,11 +138,7 @@ export default function Projects() {
                         className="flex items-center gap-2 text-xs font-mono text-indigo-400 hover:text-indigo-300 transition-colors ml-auto uppercase tracking-wider"
                       >
                         {isYoutube ? <Youtube size={14} /> : <ExternalLink size={14} />}{' '}
-                        {isYoutube
-                          ? 'Demo Video'
-                          : isOfficialSite
-                            ? language === 'fr' ? 'Site officiel' : 'Official site'
-                            : language === 'fr' ? 'Voir le projet' : 'View project'}
+                        {isYoutube ? 'Demo Video' : language === 'fr' ? 'Voir le projet' : 'View project'}
                       </a>
                     )}
                   </div>
@@ -196,7 +184,6 @@ export default function Projects() {
                   const typeText = project.type[language as 'fr' | 'en'] || project.type.fr;
                   const descText = project.description[language as 'fr' | 'en'] || project.description.fr;
                   const isYoutube = project.details.includes('youtube');
-                  const isOfficialSite = project.id === 'careflow';
 
                   return (
                     <div
@@ -252,11 +239,7 @@ export default function Projects() {
                               className="flex items-center gap-1.5 text-[11px] font-mono text-indigo-400 hover:text-indigo-300 ml-auto"
                             >
                               {isYoutube ? <Youtube size={13} /> : <ExternalLink size={13} />}{' '}
-                              {isYoutube
-                                ? 'Demo'
-                                : isOfficialSite
-                                  ? language === 'fr' ? 'Site officiel' : 'Official site'
-                                  : language === 'fr' ? 'Lien' : 'Link'}
+                              {isYoutube ? 'Demo' : language === 'fr' ? 'Lien' : 'Link'}
                             </a>
                           )}
                         </div>
