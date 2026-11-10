@@ -109,7 +109,13 @@ export const translations = {
         description: "Agent de développement local utilisé sur mes projets personnels. Il transforme les demandes en spécifications et plans d’implémentation, exécute les tâches dans des environnements isolés et s’intègre aux workflows GitHub.",
         tags: ["Python", "LangGraph", "FastAPI", "React", "GitHub API", "Workflows Agentiques", "Sandbox"],
         type: "IA Agentique / Génie Logiciel",
-      }
+      },
+      {
+        title: "Aura AI",
+        description: "Assistant numérique vocal et espace de travail unifié pour les e-mails, le calendrier et les documents, avec un système d'apprentissage RAG proposant flashcards, quiz et questions-réponses alimentés par Vertex AI.",
+        tags: ["FastAPI", "React", "Google ADK", "Vertex AI RAG", "Supabase", "Cloud Run"],
+        type: "Assistant IA / Full-Stack",
+      },
     ],
 
     // Skills
@@ -245,7 +251,13 @@ export const translations = {
         description: "A local-first development agent used across my personal projects. It turns requests into specifications and implementation plans, executes tasks in isolated environments, and integrates with GitHub workflows.",
         tags: ["Python", "LangGraph", "FastAPI", "React", "GitHub API", "Agentic Workflows", "Sandbox"],
         type: "Agentic AI / SWE Assistant",
-      }
+      },
+      {
+        title: "Aura AI",
+        description: "Voice-powered digital assistant and unified workspace for email, calendar, and documents, with a RAG-based study system offering flashcards, quizzes, and document Q&A powered by Vertex AI.",
+        tags: ["FastAPI", "React", "Google ADK", "Vertex AI RAG", "Supabase", "Cloud Run"],
+        type: "AI Assistant / Full-Stack",
+      },
     ],
 
     // Skills
