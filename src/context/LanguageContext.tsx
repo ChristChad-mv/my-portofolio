@@ -46,14 +46,24 @@ export const translations = {
     exp_current: "Actuel",
     exp_list: [
       {
+        role: "Apprenti ingénieur en IA appliquée",
+        company: "SNCF Voyageurs Matériel",
+        location: "Saint-Denis, Île-de-France",
+        period: "Sept 2026 — Présent",
+        type: "Alternance · Sur site",
+        description: "Poursuite de travaux d’IA appliquée à l’ingénierie du matériel ferroviaire : développement d’outils et de pipelines pour exploiter la documentation technique, rapprocher des versions et assister les équipes métier.",
+        tags: ["Python", "IA appliquée", "LLM", "Document Intelligence", "Recherche sémantique"],
+        active: true
+      },
+      {
         role: "Stagiaire en IA Appliquée",
         company: "SNCF Voyageurs Matériel",
         location: "St-Denis, Île-de-France",
-        period: "Avr 2026 — Présent",
+        period: "Avr 2026 — Août 2026",
         type: "Stage · Sur site",
         description: "Développement de flux de travail assistés par l'IA pour harmoniser la documentation de maintenance ferroviaire rédigée selon la spécification S1000D. Transformation de PDF complexes en données structurées et requêtables via des pipelines NLP, benchmarking de stratégies de similarité sémantique et exploration d'approches assistées par LLM pour réconcilier les incohérences entre les versions de documents.",
         tags: ["Python", "NLP", "Workflows LLM", "S1000D", "Regex", "Recherche Sémantique"],
-        active: true
+        active: false
       },
       {
         role: "Développeur Full-Stack",
@@ -84,15 +94,9 @@ export const translations = {
     proj_list: [
       {
         title: "JurisBox",
-        description: "Infrastructure d’intelligence juridique privée pour le droit OHADA, associant une appliance matérielle, des modèles open source dont Mistral, un corpus local et QuantixDB. Les documents confidentiels et l’inférence restent entièrement sur site.",
-        tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "LLM Local", "SQLCipher"],
+        description: "Infrastructure d’intelligence juridique privée pour le droit OHADA, associant une appliance matérielle, des modèles open source dont Mistral et Gemma 4, un corpus local et QuantixDB. Les documents confidentiels et l’inférence restent entièrement sur site.",
+        tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "Mistral", "Gemma 4", "SQLCipher"],
         type: "Infrastructure d’IA Juridique Privée",
-      },
-      {
-        title: "CareFlow",
-        description: "Suivi post-hospitalisation des patients via une IA médicale double-agent. Automatisation des suivis téléphoniques selon les protocoles AHRQ RED et tri instantané des réadmissions à haut risque sur un tableau de bord infirmier.",
-        tags: ["Python", "Next.js", "LangGraph", "Twilio", "Firestore", "Cloud Scheduler"],
-        type: "IA / Système Multi-Agent",
       },
       {
         title: "MockInterview.ai",
@@ -178,14 +182,24 @@ export const translations = {
     exp_current: "Current",
     exp_list: [
       {
+        role: "Applied AI Engineer (Apprenticeship)",
+        company: "SNCF Voyageurs Matériel",
+        location: "Saint-Denis, Île-de-France",
+        period: "Sep 2026 — Present",
+        type: "Apprenticeship · On-site",
+        description: "Continuing applied AI engineering work for railway rolling stock, developing tools and pipelines for technical-document understanding, cross-version reconciliation, and engineering workflows.",
+        tags: ["Python", "Applied AI", "LLMs", "Document Intelligence", "Semantic Search"],
+        active: true
+      },
+      {
         role: "Applied AI Intern",
         company: "SNCF Voyageurs Matériel",
         location: "St-Denis, Île-de-France",
-        period: "Apr 2026 — Present",
+        period: "Apr 2026 — Aug 2026",
         type: "Internship · On-site",
         description: "Building AI-assisted workflows to harmonize railway maintenance documentation across technical documents written to the S1000D specification. Transforming complex PDFs into structured, queryable data using NLP pipelines, benchmarking semantic similarity strategies, and exploring LLM-assisted approaches for reconciling inconsistencies across document versions.",
         tags: ["Python", "NLP", "LLM Workflows", "S1000D", "Regex", "Semantic Search"],
-        active: true
+        active: false
       },
       {
         role: "Full-Stack Developer",
@@ -216,15 +230,9 @@ export const translations = {
     proj_list: [
       {
         title: "JurisBox",
-        description: "Private legal AI infrastructure for OHADA law combining a dedicated hardware appliance, open-source models including Mistral, a local legal corpus, and QuantixDB. Confidential documents and inference remain entirely on-premise.",
-        tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "Local LLM", "SQLCipher"],
+        description: "Private legal AI infrastructure for OHADA law combining a dedicated hardware appliance, open-source models including Mistral and Gemma 4, a local legal corpus, and QuantixDB. Confidential documents and inference remain entirely on-premise.",
+        tags: ["Rust", "Python", "Tauri", "QuantixDB", "ONNX", "Mistral", "Gemma 4", "SQLCipher"],
         type: "Private Legal AI Infrastructure",
-      },
-      {
-        title: "CareFlow",
-        description: "Post-hospitalization patient monitoring with dual-agent medical AI. Automates telephone check-ins following AHRQ RED protocols and instantly triages high-risk readmissions to a nurse dashboard.",
-        tags: ["Python", "Next.js", "LangGraph", "Twilio", "Firestore", "Cloud Scheduler"],
-        type: "AI / Multi-Agent System",
       },
       {
         title: "MockInterview.ai",
