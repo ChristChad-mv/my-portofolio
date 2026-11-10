@@ -19,6 +19,7 @@ This is the source code for my personal portfolio, showcasing my work at the int
 1. **JurisBox** - On-premise legal AI infrastructure using open models including Mistral and Gemma 4.
 2. **Forge IA** - Local-first AI coding assistant.
 3. **MockInterview.ai** - Multimodal AI interview simulator using WebSockets.
+4. **Aura AI** - Voice-powered assistant and RAG study workspace using Vertex AI.
 
 ## 🛠️ Local Development
 

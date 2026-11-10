@@ -93,7 +93,7 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 'aura-ai',
     title: 'Aura AI',
-    featured: false,
+    featured: true,
     type: {
       fr: 'Full-Stack / Assistant IA',
       en: 'Full-Stack / AI Assistant',
